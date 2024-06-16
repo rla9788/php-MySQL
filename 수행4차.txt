@@ -1,0 +1,34 @@
+ 테이블 생성
+SQL> create table 부서별성과분석표(
+  2  부서명 varchar2(20),
+  3  a number(10),
+  4  b number(10),
+  5  c number(10),
+  6  평가 varchar2(20));
+
+ 테이블 삭제
+SQL> drop table 부서별성과분석표
+
+ 데이터 추가
+SQL> insert into abc
+  2  values('영업1부',100,90,80,'우수');
+
+ 테이블 복사
+SQL> create table abc
+  2  as select * from 부서별성과분석표;
+
+ 행 추가
+SQL> alter table 부서별성과분석표
+  2  add 몸무게 varchar2(10);
+
+ 행 이름 변경
+SQL> alter table 부서별성과분석표
+  2  rename column 몸무게 to 성과금;
+
+ 열의 자료형을 변경하는 MODIFY
+SQL> alter table 부서별성과분석표
+  2  modify may number(5);
+
+ 특정 열을 삭제
+SQL> alter table 부서별성과분석표
+  2  drop column 성과금;
